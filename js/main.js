@@ -20,6 +20,12 @@
     blush: "#ffb86b"
   };
 
+  const DUCK_ACCENTS = {
+    blue: { body: "#5ec8ff", bodyDark: "#3da8e0", bodyLight: "#a8e6ff", beak: "#ffb347", beakDark: "#e69a30", wing: "#4db4ec", wingDark: "#3a9bd6" },
+    pink: { body: "#ff9ecb", bodyDark: "#e67fb0", bodyLight: "#ffc8e3", beak: "#ffb347", beakDark: "#e69a30", wing: "#f58bbd", wingDark: "#e070a8" },
+    green: { body: "#9bd94b", bodyDark: "#7dbb34", bodyLight: "#c2ef7d", beak: "#ffb347", beakDark: "#e69a30", wing: "#8ccb41", wingDark: "#76b433" }
+  };
+
   /**
    * Build a cute cartoon duck SVG.
    * opts: { crown, crying, celebrating, confidential, baby, flip, mood }
@@ -35,7 +41,7 @@
       mood = null
     } = opts;
 
-    const C = DUCK_COLORS;
+    const C = { ...DUCK_COLORS, ...(DUCK_ACCENTS[opts.accent] || {}) };
     const s = baby ? 0.55 : 1;
 
     // scale helper
@@ -297,6 +303,16 @@
     if (type === "crying") renderDuck(node, { crying: true, mood: "pato chorando" });
     if (type === "crying-2") renderDuck(node, { crying: true, flip: true, mood: "pato chorando de novo" });
     if (type === "confidential") renderDuck(node, { confidential: true, mood: "pato confidencial" });
+  });
+
+  const relatoDucks = {
+    schayanne: { accent: "blue", celebrating: true, mood: "pato depoente" },
+    colgate: { accent: "pink", celebrating: true, flip: true, mood: "pato depoente" },
+    "js-king": { accent: "green", celebrating: true, mood: "pato depoente" }
+  };
+  Object.keys(relatoDucks).forEach((key) => {
+    const node = document.querySelector(`[data-duck="${key}"]`);
+    if (node) renderDuck(node, relatoDucks[key]);
   });
 
   renderDuck(document.getElementById("qi-duck"), { mood: "pato científico" });
