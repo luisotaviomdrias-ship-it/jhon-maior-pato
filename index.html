@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jhon — O Maior Pato da Sala 🦆👑</title>
+  <meta name="description" content="A lenda. O mito. O maior pato da sala. Site 100% oficial (e 100% zoeira) sobre Jhon." />
+  <meta name="theme-color" content="#ffd500" />
+  <link rel="canonical" href="https://jhon.pato.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jhon.pato.com/" />
+  <meta property="og:title" content="Jhon — O Maior Pato da Sala 🦆👑" />
+  <meta property="og:description" content="A lenda. O mito. O maior pato da sala. Site 100% oficial (e 100% zoeira) sobre Jhon." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Jhon — O Maior Pato da Sala 🦆👑" />
+  <meta name="twitter:description" content="A lenda. O mito. O maior pato da sala." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦆</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- floating background ducks -->
+  <div class="bg-ducks" aria-hidden="true">
+    <span class="bg-duck d1">🦆</span>
+    <span class="bg-duck d2">🦆</span>
+    <span class="bg-duck d3">🦆</span>
+    <span class="bg-duck d4">🦆</span>
+    <span class="bg-duck d5">🦆</span>
+    <span class="bg-duck d6">🦆</span>
+  </div>
+
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- ══════════════════ NAV ══════════════════ -->
+  <header class="nav">
+    <a href="#topo" class="nav-logo">
+      <span class="nav-emoji">🦆</span>
+      <span class="nav-text">PROJETO PATO</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#historia">História</a>
+      <a href="#estatisticas">Stats</a>
+      <a href="#museu">Museu</a>
+      <a href="#qi">QI</a>
+      <a href="#modo-pato">Modo Pato</a>
+    </nav>
+  </header>
+
+  <main id="topo">
+    <!-- ══════════════════ HERO ══════════════════ -->
+    <section class="hero">
+      <div class="hero-glow glow-1" aria-hidden="true"></div>
+      <div class="hero-glow glow-2" aria-hidden="true"></div>
+
+      <div class="hero-duck-wrap reveal">
+        <div class="hero-duck-bob">
+          <div id="hero-duck" class="hero-duck"></div>
+          <div class="hero-crown" aria-hidden="true">👑</div>
+        </div>
+        <div class="hero-float-badge badge-left" aria-hidden="true">🏆</div>
+        <div class="hero-float-badge badge-right" aria-hidden="true">⚽</div>
+      </div>
+
+      <p class="hero-eyebrow reveal">DOCUMENTÁRIO OFICIAL · TEMPORADA 1</p>
+      <h1 class="hero-title reveal">A LENDA. O MITO.<br />O <span class="text-outline">MAIOR PATO</span> DA SALA.</h1>
+      <p class="hero-sub reveal">Conheça a trajetória inacreditável de Jhon.</p>
+
+      <div class="hero-actions reveal">
+        <button class="btn btn-primary" id="btn-historia">
+          VER O HISTÓRICO DO PATO 🦆
+        </button>
+        <span class="hero-note">(leia com respeito. quase.)</span>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="mouse"><span></span></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ HISTÓRIA ══════════════════ -->
+    <section class="section" id="historia">
+      <div class="container">
+        <div class="card glass reveal">
+          <span class="stamp" aria-hidden="true">📜</span>
+          <h2 class="section-title">A HISTÓRIA DE UMA LENDA</h2>
+          <div class="story-text">
+            <p>
+              Esse cara se chama <strong>Jhon</strong>. Dá pra perceber que ele é ruim.
+              Essa lenda conseguiu ser o maior pato de toda minha sala, acumulando
+              resultados como <strong>8 a 0</strong>, <strong>5 a 0</strong> e outros
+              placares que prefiro nem citar.
+            </p>
+            <p>
+              Segundo ele, é inteligente. Porém, os números contam uma história um
+              pouco diferente: conseguiu tirar <strong>1 em matemática</strong> e
+              <strong>0 em informática básica</strong>.
+            </p>
+            <p>
+              Além disso, ficou conhecido na sala por ser um dos mais atentados e,
+              segundo a comissão internacional dos amigos, também disputa fortemente
+              o título de <strong>maior burro da turma</strong>.
+            </p>
+            <p>Mas uma coisa ninguém pode negar:</p>
+            <p class="story-big">Jhon é uma lenda. 🦆👑</p>
+          </div>
+          <div class="disclaimer-note">* Esta é uma brincadeira 100% entre amigos. Nenhum pato foi ferido. Nenhuma nota foi inventada. Ok, as notas foram meio inventadas. Mas o carinho é real.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ ESTATÍSTICAS ══════════════════ -->
+    <section class="section" id="estatisticas">
+      <div class="container">
+        <h2 class="section-title reveal">📊 ESTATÍSTICAS DO PATO</h2>
+        <p class="section-sub reveal">Números auditados pela Comissão Internacional dos Amigos (não auditados por ninguém, na real).</p>
+
+        <div class="stats-grid">
+          <div class="card stat glass reveal">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-value"><span class="count" data-text="∞">∞</span></div>
+            <div class="stat-label">Derrotas históricas</div>
+            <div class="stat-tag">muitas. tipo, muitas.</div>
+          </div>
+
+          <div class="card stat glass reveal">
+            <div class="stat-icon">⚽</div>
+            <div class="stat-value"><span class="count" data-target="8">0</span><span class="stat-x">× 0</span></div>
+            <div class="stat-label">Maior derrota</div>
+            <div class="stat-tag">entrou para os livros de história</div>
+          </div>
+
+          <div class="card stat glass reveal">
+            <div class="stat-icon">📉</div>
+            <div class="stat-value"><span class="count" data-target="5">0</span><span class="stat-x">× 0</span></div>
+            <div class="stat-label">Outro momento histórico</div>
+            <div class="stat-tag">o replay é classificado como +16</div>
+          </div>
+
+          <div class="card stat glass reveal">
+            <div class="stat-icon">🧮</div>
+            <div class="stat-value"><span class="count" data-target="1">0</span></div>
+            <div class="stat-label">Nota em Matemática</div>
+            <div class="stat-tag">quase gabaritou. de baixo pra cima</div>
+          </div>
+
+          <div class="card stat glass reveal">
+            <div class="stat-icon">💻</div>
+            <div class="stat-value"><span class="count" data-target="0">0</span></div>
+            <div class="stat-label">Nota em Informática Básica</div>
+            <div class="stat-tag">o computador pediu desculpas por ele</div>
+          </div>
+
+          <div class="card stat glass reveal">
+            <div class="stat-icon">🦆</div>
+            <div class="stat-value"><span class="count" data-target="100">0</span><span class="stat-x">%</span></div>
+            <div class="stat-label">Nível de pato</div>
+            <div class="stat-tag">quack.</div>
+          </div>
+
+          <div class="card stat glass stat-special reveal">
+            <div class="stat-icon">👑</div>
+            <div class="stat-value stat-title">Maior Pato da Sala</div>
+            <div class="stat-label">Título oficial vitalício</div>
+            <div class="stat-tag">homologado por decreto e por sorteio</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ MUSEU ══════════════════ -->
+    <section class="section" id="museu">
+      <div class="container">
+        <h2 class="section-title reveal">🏅 MUSEU DOS MOMENTOS</h2>
+        <p class="section-sub reveal">Cuidado. Entrar aqui é presenciar a história.</p>
+
+        <div class="museum-grid">
+          <div class="card museum glass reveal">
+            <div class="museum-duck" data-duck="crying"></div>
+            <div class="museum-score">🥇 8 × 0</div>
+            <p class="museum-text">Um resultado que entrou para a história.</p>
+            <div class="museum-hall">Sala “Não tem jeito” · 2024</div>
+          </div>
+
+          <div class="card museum glass reveal">
+            <div class="museum-duck" data-duck="crying-2"></div>
+            <div class="museum-score">🥈 5 × 0</div>
+            <p class="museum-text">Porque aparentemente um vexame não foi suficiente.</p>
+            <div class="museum-hall">Sala “De novo?” · 2025</div>
+          </div>
+
+          <div class="card museum glass reveal">
+            <div class="museum-duck" data-duck="confidential"></div>
+            <div class="museum-score">🥉 OUTROS</div>
+            <p class="museum-text">Resultados tão inexplicáveis que foram classificados como informação confidencial.</p>
+            <div class="museum-hall">Arquivo secreto · Nível pato</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ QI ══════════════════ -->
+    <section class="section" id="qi">
+      <div class="container">
+        <div class="card glass qi-card reveal">
+          <h2 class="section-title">🧠 ANÁLISE CIENTÍFICA DO PATO</h2>
+
+          <div class="qi-lab">
+            <div class="qi-duck" id="qi-duck"></div>
+
+            <div class="qi-panel">
+              <div class="qi-head">
+                <span class="qi-name">QI do Jhon</span>
+                <span class="qi-value" id="qi-value">0</span>
+              </div>
+              <div class="qi-track">
+                <div class="qi-fill" id="qi-fill"></div>
+                <div class="qi-marker" id="qi-marker">🦆</div>
+              </div>
+              <div class="qi-scale">
+                <span>pedra</span>
+                <span>paralelepípedo</span>
+                <span>humano médio</span>
+                <span>gênio</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="qi-text">
+            Após rigorosos estudos realizados pela Universidade Internacional dos Patos,
+            foi constatado que Jhon possui um talento especial para transformar situações
+            fáceis em momentos históricos.
+          </p>
+
+          <button class="btn btn-primary" id="btn-qi">CALCULAR INTELIGÊNCIA 🧠</button>
+
+          <div class="qi-result" id="qi-result" aria-live="polite">
+            <div class="qi-loading" id="qi-loading" hidden>
+              <div class="qi-loading-bar"></div>
+              <span id="qi-loading-text">Processando neurônios...</span>
+            </div>
+            <div class="qi-error" id="qi-error" hidden>
+              <span class="qi-error-code">Erro 404</span>
+              <span class="qi-error-msg">inteligência não encontrada.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ MODO PATO ══════════════════ -->
+    <section class="section" id="modo-pato">
+      <div class="container">
+        <h2 class="section-title reveal">🦆 MODO PATO</h2>
+        <p class="section-sub reveal">Uma unidade de Jhon foi avistada na região. Sua missão: soltar.</p>
+
+        <div class="duck-stage glass reveal" id="duck-stage">
+          <div class="stage-hint">ÁREA DE QUARENTENA 🦠</div>
+          <div class="stage-duck" id="stage-duck"></div>
+          <button class="btn btn-big" id="btn-duck">SOLTAR O PATO 🎉</button>
+        </div>
+
+        <div class="duck-alert" id="duck-alert" hidden>
+          <span class="duck-alert-emoji">🦆</span>
+          <span>JHON FOI AVISTADO NOVAMENTE</span>
+        </div>
+
+        <div class="baby-area" id="baby-area"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ CONCLUSÃO ══════════════════ -->
+    <section class="section finale" id="conclusao">
+      <div class="container finale-inner">
+        <h2 class="finale-title reveal">JHON, VOCÊ NÃO É APENAS UM PATO.</h2>
+        <p class="finale-sub reveal">Você é patrimônio histórico da sala.</p>
+
+        <div class="finale-crown-wrap reveal">
+          <span class="finale-crown">👑</span>
+          <div class="finale-duck-big" id="finale-duck"></div>
+          <div class="finale-sparkles">
+            <span>✨</span><span>🎉</span><span>✨</span><span>🦆</span><span>✨</span>
+          </div>
+        </div>
+
+        <div class="finale-banner reveal">
+          <span>🦆</span>
+          <h3>MAIOR PATO DA SALA</h3>
+          <span>🦆</span>
+        </div>
+
+        <div class="finale-duckies" id="finale-duckies"></div>
+
+        <button class="btn btn-primary reveal" id="btn-celebrate">COMEMORAR DE NOVO 🎉</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>🦆 Projeto Pato™ — feito com 100% de zoeira e 0% de ofensa. Todos os direitos reservados a Jhon, por piedade.</p>
+      <p class="footer-small">Este site é uma brincadeira entre amigos e não possui qualquer intenção de difamar, ofender ou diminuir ninguém. Qualquer semelhança com patos é mera coincidência.</p>
+    </footer>
+  </main>
+
+  <div class="flying-duck" id="flying-duck" hidden></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
