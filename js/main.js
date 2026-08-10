@@ -297,6 +297,7 @@
   /* ────────────── INITIAL DUCK RENDERS ────────────── */
 
   renderDuck(document.getElementById("hero-duck"), { crown: true, celebrating: true, mood: "Jhon usando coroa" });
+  renderDuck(document.getElementById("lock-duck"), { crown: true, mood: "pato guardião da senha" });
 
   document.querySelectorAll("[data-duck]").forEach((node) => {
     const type = node.dataset.duck;
@@ -334,6 +335,49 @@
   document.getElementById("btn-historia").addEventListener("click", () => {
     const target = document.getElementById("historia");
     target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  /* ────────────── LOCK SCREEN (a zueira está trancada) ────────────── */
+
+  const LOCK_PASSWORD = "104colgate123";
+  const lockScreen = document.getElementById("lock-screen");
+  const lockForm = document.getElementById("lock-form");
+  const lockInput = document.getElementById("lock-input");
+  const lockError = document.getElementById("lock-error");
+
+  function unlockSite(silent) {
+    document.body.classList.remove("locked");
+    lockScreen.classList.add("unlocked");
+    if (!silent) {
+      quack();
+      burst(window.innerWidth / 2, window.innerHeight / 2, 120);
+      burst(window.innerWidth / 2, window.innerHeight / 2 - 120, 70);
+    }
+    setTimeout(() => {
+      lockScreen.hidden = true;
+    }, 850);
+  }
+
+  // se já foi desbloqueada nesta sessão, abre direto
+  if (sessionStorage.getItem("patoDesbloqueado") === "1") {
+    document.body.classList.remove("locked");
+    lockScreen.hidden = true;
+  }
+
+  lockForm.addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    if (lockInput.value === LOCK_PASSWORD) {
+      lockError.hidden = true;
+      sessionStorage.setItem("patoDesbloqueado", "1");
+      unlockSite(false);
+    } else {
+      lockError.hidden = false;
+      lockForm.classList.remove("shake");
+      void lockForm.offsetWidth;
+      lockForm.classList.add("shake");
+      lockInput.value = "";
+      lockInput.focus();
+    }
   });
 
   /* ────────────── QI BUTTON ────────────── */

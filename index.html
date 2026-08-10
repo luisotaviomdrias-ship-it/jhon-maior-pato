@@ -21,7 +21,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="locked">
+
+  <!-- ══════════════════ LOCK SCREEN ══════════════════ -->
+  <div class="lock-screen" id="lock-screen">
+    <div class="lock-glow lock-glow-1" aria-hidden="true"></div>
+    <div class="lock-glow lock-glow-2" aria-hidden="true"></div>
+    <div class="lock-inner">
+      <div class="lock-duck" id="lock-duck"></div>
+      <p class="lock-eyebrow">ÁREA ALTAMENTE CONFIDENCIAL</p>
+      <h1 class="lock-title">A ZUEIRA ESTÁ TRANCADA 🔒</h1>
+      <p class="lock-sub">
+        Este site contém conteúdo que a Comissão Internacional dos Amigos considera
+        perigoso demais para circulação geral. Digite a senha para desbloquear.
+      </p>
+      <form class="lock-form" id="lock-form" autocomplete="off">
+        <input
+          type="password"
+          id="lock-input"
+          class="lock-input"
+          placeholder="senha"
+          maxlength="40"
+          aria-label="senha de acesso"
+        />
+        <button type="submit" class="btn btn-primary">DESBLOQUEAR A ZUEIRA 🦆</button>
+      </form>
+      <p class="lock-error" id="lock-error" hidden>senha incorreta. o pato ficou de olho.</p>
+      <p class="lock-hint">* brincadeira entre amigos. se você sabe a senha, você sabe.</p>
+    </div>
+  </div>
 
   <!-- floating background ducks -->
   <div class="bg-ducks" aria-hidden="true">
